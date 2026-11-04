@@ -1,0 +1,287 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://mrwasimghori90.github.io/Daybook/Daybook.html
+Subject: Daybook
+Date: Wed, 04 Nov 2026 04:40:12 GMT
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--5zHR2rr4gxPN19NS7YgDLobpuEa4R2AVn74fb21pC3----"
+
+
+------MultipartBoundary--5zHR2rr4gxPN19NS7YgDLobpuEa4R2AVn74fb21pC3----
+Content-Type: text/html
+Content-ID: <frame-F135BECCE893D4C11A9F9B5EDE60DE77@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://mrwasimghori90.github.io/Daybook/Daybook.html
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-1b8d6033-5456-4eb9-afb7-552c990e3f9a@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-b64b36ad-535e-42a5-8fb6-790ff3e61991@mhtml.blink" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
+<title>Daybook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=DM+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="when">
+      <h1 class="weekday" id="weekday">Wednesday</h1>
+      <div class="fulldate" id="fulldate">4 November 2026</div>
+    </div>
+    <div class="ring" aria-live="polite">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle class="track" cx="50" cy="50" r="42" fill="none" stroke-width="9"></circle>
+        <circle class="bar" id="ringBar" cx="50" cy="50" r="42" fill="none" stroke-width="9" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9" style="stroke-dashoffset: 263.9;"></circle>
+      </svg>
+      <div class="label"><div><span id="ringNum">0/3</span><small>goals</small></div></div>
+    </div>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tabTasks" data-tab="tasks" aria-selected="true">Tasks <span class="count" id="countTasks">2</span></button>
+    <button class="tab" role="tab" id="tabGoals" data-tab="goals" aria-selected="false">Daily goals <span class="count" id="countGoals">3</span></button>
+  </div>
+
+  <div class="note" id="sampleNote">
+    <span>These are sample entries. Delete them or add your own.</span>
+    <button type="button" id="clearSamples">Clear samples</button>
+  </div>
+
+  <section id="tasksView" aria-labelledby="tabTasks" style="display: flex; flex-direction: column; gap: 14px;">
+    <form class="add" id="taskForm" autocomplete="off">
+      <input id="taskInput" type="text" maxlength="140" placeholder="Add a task" aria-label="New task">
+      <button type="submit">Add</button>
+    </form>
+    <div class="filters" id="filters">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-filter="open" aria-pressed="false">To do</button>
+      <button type="button" class="chip" data-filter="done" aria-pressed="false">Done</button>
+    </div>
+    <ul class="list" id="taskList"><li class="item" data-id="mw1modln4nk5g"><button class="check" data-act="toggle-task" aria-label="Mark as done"><span><svg viewBox="0 0 14 14" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"></path></svg></span></button><div class="title">Reply to the landlord about the lease</div><button class="del" data-act="del-task" aria-label="Delete task">×</button></li><li class="item" data-id="mw1modln9mf0p"><button class="check" data-act="toggle-task" aria-label="Mark as done"><span><svg viewBox="0 0 14 14" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"></path></svg></span></button><div class="title">Buy groceries: rice, lentils, onions</div><button class="del" data-act="del-task" aria-label="Delete task">×</button></li><li class="item done" data-id="mw1modln1usjp"><button class="check" data-act="toggle-task" aria-label="Mark as not done"><span><svg viewBox="0 0 14 14" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"></path></svg></span></button><div class="title">Pay the electricity bill</div><button class="del" data-act="del-task" aria-label="Delete task">×</button></li></ul>
+    <div class="foot"><span id="taskSummary">2 to do, 1 done</span><button type="button" id="clearDone">Clear done</button></div>
+  </section>
+
+  <section id="goalsView" class="goals-view" aria-labelledby="tabGoals" style="display: none; flex-direction: column; gap: 14px;">
+    <form class="add" id="goalForm" autocomplete="off">
+      <input id="goalInput" type="text" maxlength="80" placeholder="New daily goal, e.g. Read 20 pages" aria-label="New daily goal">
+      <button type="submit">Add</button>
+    </form>
+    <div class="list" id="goalList"><div class="goal" data-id="mw1modln7wcrh"><div class="top"><button class="check" data-act="toggle-day" data-day="2026-11-04" aria-label="Done for today"><span><svg viewBox="0 0 14 14" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"></path></svg></span></button><div class="name">Walk 30 minutes</div><span class="streak">3 days</span><button class="del" data-act="del-goal" aria-label="Delete goal">×</button></div><div class="week"><button class="day" data-act="toggle-day" data-day="2026-10-29" aria-pressed="false" aria-label="Thursday 29 Oct"><i>TH</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-10-30" aria-pressed="false" aria-label="Friday 30 Oct"><i>FR</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-10-31" aria-pressed="false" aria-label="Saturday 31 Oct"><i>SA</i><b></b></button><button class="day on" data-act="toggle-day" data-day="2026-11-01" aria-pressed="true" aria-label="Sunday 1 Nov"><i>SU</i><b></b></button><button class="day on" data-act="toggle-day" data-day="2026-11-02" aria-pressed="true" aria-label="Monday 2 Nov"><i>MO</i><b></b></button><button class="day on" data-act="toggle-day" data-day="2026-11-03" aria-pressed="true" aria-label="Tuesday 3 Nov"><i>TU</i><b></b></button><button class="day today" data-act="toggle-day" data-day="2026-11-04" aria-pressed="false" aria-label="Wednesday 4 Nov"><i>WE</i><b></b></button></div></div><div class="goal" data-id="mw1modlnlyej8"><div class="top"><button class="check" data-act="toggle-day" data-day="2026-11-04" aria-label="Done for today"><span><svg viewBox="0 0 14 14" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"></path></svg></span></button><div class="name">Read 20 pages</div><span class="streak">1 day</span><button class="del" data-act="del-goal" aria-label="Delete goal">×</button></div><div class="week"><button class="day" data-act="toggle-day" data-day="2026-10-29" aria-pressed="false" aria-label="Thursday 29 Oct"><i>TH</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-10-30" aria-pressed="false" aria-label="Friday 30 Oct"><i>FR</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-10-31" aria-pressed="false" aria-label="Saturday 31 Oct"><i>SA</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-11-01" aria-pressed="false" aria-label="Sunday 1 Nov"><i>SU</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-11-02" aria-pressed="false" aria-label="Monday 2 Nov"><i>MO</i><b></b></button><button class="day on" data-act="toggle-day" data-day="2026-11-03" aria-pressed="true" aria-label="Tuesday 3 Nov"><i>TU</i><b></b></button><button class="day today" data-act="toggle-day" data-day="2026-11-04" aria-pressed="false" aria-label="Wednesday 4 Nov"><i>WE</i><b></b></button></div></div><div class="goal" data-id="mw1modln97psk"><div class="top"><button class="check" data-act="toggle-day" data-day="2026-11-04" aria-label="Done for today"><span><svg viewBox="0 0 14 14" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"></path></svg></span></button><div class="name">Drink 8 glasses of water</div><span class="streak zero">0 days</span><button class="del" data-act="del-goal" aria-label="Delete goal">×</button></div><div class="week"><button class="day" data-act="toggle-day" data-day="2026-10-29" aria-pressed="false" aria-label="Thursday 29 Oct"><i>TH</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-10-30" aria-pressed="false" aria-label="Friday 30 Oct"><i>FR</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-10-31" aria-pressed="false" aria-label="Saturday 31 Oct"><i>SA</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-11-01" aria-pressed="false" aria-label="Sunday 1 Nov"><i>SU</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-11-02" aria-pressed="false" aria-label="Monday 2 Nov"><i>MO</i><b></b></button><button class="day" data-act="toggle-day" data-day="2026-11-03" aria-pressed="false" aria-label="Tuesday 3 Nov"><i>TU</i><b></b></button><button class="day today" data-act="toggle-day" data-day="2026-11-04" aria-pressed="false" aria-label="Wednesday 4 Nov"><i>WE</i><b></b></button></div></div></div>
+    <div class="foot"><span>Tap a dot to fix a past day.</span></div>
+  </section>
+</div>
+
+
+
+</body></html>
+------MultipartBoundary--5zHR2rr4gxPN19NS7YgDLobpuEa4R2AVn74fb21pC3----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGHInHWVyNJtvI.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHWVyNJtvI.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 700; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGHInHWVyNJtvI.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 700; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHWVyNJtvI.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 700; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx3cwgknk-6nFg.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxTcwgknk-6nFg.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxPcwgknk-6nFg.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx_cwgknk-6nFg.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx7cwgknk-6nFg.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx3cwgknk-6nFg.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxTcwgknk-6nFg.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxPcwgknk-6nFg.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx_cwgknk-6nFg.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx7cwgknk-6nFg.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--5zHR2rr4gxPN19NS7YgDLobpuEa4R2AVn74fb21pC3----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-b64b36ad-535e-42a5-8fb6-790ff3e61991@mhtml.blink
+
+@charset "utf-8";
+
+:root { --bg: #f2f5f8; --surface: #ffffff; --fg: #14202b; --muted: #5f6f7e; --line: #d9e1e8; --accent: #1d6e8c; --accent-ink: #ffffff; --goal: #c4791f; --goal-soft: #f6e7d2; --done: #8896a3; --danger: #b3362f; --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif; --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0f161c; --surface: #17212a; --fg: #e8eef3; --muted: #93a3b1; --line: #263543; --accent: #5fb4d1; --accent-ink: #0b1a22; --goal: #e8a653; --goal-soft: #3a2c16; --done: #6b7b89; --danger: #ef7a72; color-scheme: dark; }
+}
+
+:root[data-theme="dark"] { --bg: #0f161c; --surface: #17212a; --fg: #e8eef3; --muted: #93a3b1; --line: #263543; --accent: #5fb4d1; --accent-ink: #0b1a22; --goal: #e8a653; --goal-soft: #3a2c16; --done: #6b7b89; --danger: #ef7a72; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.45; padding-block: 20px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.wrap { max-width: 520px; margin: 0px auto; display: flex; flex-direction: column; gap: 18px; }
+
+button, input { font: inherit; color: inherit; }
+
+button { cursor: pointer; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.masthead { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 6px; }
+
+.masthead .when { min-width: 0px; }
+
+.weekday { font-family: var(--font-display); font-weight: 700; font-size: 2.4rem; line-height: 1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance; }
+
+.fulldate { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); margin-top: 8px; letter-spacing: 0.02em; }
+
+.ring { position: relative; width: 84px; height: 84px; flex: 0 0 auto; }
+
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+
+.ring .track { stroke: var(--line); }
+
+.ring .bar { stroke: var(--goal); transition: stroke-dashoffset 0.4s; }
+
+.ring .label { position: absolute; inset: 0px; display: grid; place-items: center; text-align: center; font-family: var(--font-mono); font-size: 0.95rem; font-weight: 500; line-height: 1.1; }
+
+.ring .label small { display: block; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; background: var(--line); border-radius: 12px; }
+
+.tab { border: 0px; background: transparent; padding: 10px 8px; border-radius: 9px; font-weight: 600; color: var(--muted); display: flex; justify-content: center; align-items: baseline; gap: 8px; }
+
+.tab .count { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 400; }
+
+.tab[aria-selected="true"] { background: var(--surface); color: var(--fg); box-shadow: rgba(10, 30, 45, 0.12) 0px 1px 2px; }
+
+.add { display: flex; gap: 8px; }
+
+.add input { flex: 1 1 0%; min-width: 0px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+
+.add input::placeholder { color: var(--muted); }
+
+.add button { border: 0px; background: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 0px 18px; border-radius: 12px; }
+
+.goals-view .add button { background: var(--goal); color: rgb(255, 255, 255); }
+
+.note { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.85rem; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 10px 12px; }
+
+.note button { border: 0px; background: transparent; color: var(--accent); font-weight: 600; padding: 4px; }
+
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.chip { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 5px 12px; font-size: 0.85rem; color: var(--muted); }
+
+.chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+.list { list-style: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 8px; }
+
+.item { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 6px 6px 6px 8px; }
+
+.check { width: 44px; height: 44px; flex: 0 0 auto; border: 0px; background: transparent; display: grid; place-items: center; }
+
+.check span { width: 24px; height: 24px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; transition: background 0.15s, border-color 0.15s; }
+
+.check span svg { width: 14px; height: 14px; opacity: 0; stroke: var(--accent-ink); }
+
+.item.done .check span { background: var(--accent); border-color: var(--accent); }
+
+.item.done .check span svg { opacity: 1; }
+
+.item .title { flex: 1 1 0%; min-width: 0px; overflow-wrap: anywhere; }
+
+.item.done .title { color: var(--done); text-decoration: line-through 1px; }
+
+.item .meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); display: block; margin-top: 2px; }
+
+.del { border: 0px; background: transparent; color: var(--muted); width: 44px; height: 44px; border-radius: 10px; font-size: 1.3rem; line-height: 1; flex: 0 0 auto; }
+
+.del:hover, .del.armed { color: var(--danger); }
+
+.del.armed { font-size: 0.8rem; font-weight: 600; width: auto; padding: 0px 10px; }
+
+.goal { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 8px 8px 12px; display: flex; flex-direction: column; gap: 6px; }
+
+.goal .top { display: flex; align-items: center; gap: 12px; }
+
+.goal .name { flex: 1 1 0%; min-width: 0px; font-weight: 600; overflow-wrap: anywhere; }
+
+.goal.done .check span { background: var(--goal); border-color: var(--goal); }
+
+.goal.done .check span svg { opacity: 1; }
+
+.streak { font-family: var(--font-mono); font-size: 0.8rem; color: var(--goal); background: var(--goal-soft); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+
+.streak.zero { color: var(--muted); background: transparent; border: 1px solid var(--line); }
+
+.week { display: flex; justify-content: space-between; gap: 4px; padding: 0px 10px 0px 12px; }
+
+.day { border: 0px; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 2px 0px; min-width: 36px; }
+
+.day i { font-style: normal; font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em; }
+
+.day b { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--line); display: block; }
+
+.day.on b { background: var(--goal); border-color: var(--goal); }
+
+.day.today i { color: var(--fg); font-weight: 500; }
+
+.day.today b { border-color: var(--muted); }
+
+.day.today.on b { border-color: var(--goal); }
+
+.empty { text-align: center; color: var(--muted); padding: 28px 12px; border: 1px dashed var(--line); border-radius: 14px; }
+
+.foot { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--muted); gap: 12px; }
+
+.foot button { border: 0px; background: transparent; color: var(--accent); font-weight: 600; padding: 6px 0px; }
+
+.foot button[disabled] { color: var(--muted); opacity: 0.5; cursor: default; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+------MultipartBoundary--5zHR2rr4gxPN19NS7YgDLobpuEa4R2AVn74fb21pC3----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-1b8d6033-5456-4eb9-afb7-552c990e3f9a@mhtml.blink
+
+@charset "utf-8";
+
+:root { color-scheme: light; box-sizing: border-box; padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px); }
+
+html { scroll-padding-top: env(safe-area-inset-top,0px); }
+
+body { margin: 0px; padding: 0px; font: 14px -apple-system, BlinkMacSystemFont, sans-serif; background: rgb(255, 255, 255); color: rgb(0, 0, 0); }
+
+img { max-width: 100%; }
+
+[hidden]:not([hidden="until-found" i]) { display: none !important; }
+------MultipartBoundary--5zHR2rr4gxPN19NS7YgDLobpuEa4R2AVn74fb21pC3------
